@@ -4,7 +4,7 @@ var app = express();
 var db = require('./db');
 var students = require('./Students/Students.controller');
 app.set('view engine','ejs');
-app.use('/student',students);
+app.use('/students',students);
 
 app.get('/',function(req,res){
     res.render('home');

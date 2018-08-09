@@ -1,0 +1,13 @@
+<%- include home %>
+		<table border="2" cellpadding="10" cellspacing="10" width="50%">
+			<% for(var i = 0; i < data.length; i++) { %>
+				<tr>
+					<td> <%= data[i]._id %> </td>
+					<td> <%= data[i].fname %> </td>
+					<td> <%= data[i].lname %> </td>
+                    <td> <%= data[i].rollNumber %> </td>
+				</tr>
+			<% } %>
+		</table>
+</body>
+</html>
