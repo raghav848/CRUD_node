@@ -33,18 +33,18 @@
 <% } else { %>
   <div class="container">
       <h2>Update Details</h2>
-      <form action="/students/update_students" method="POST">
+      <form action="/students/update_students/<%= data._id %>" method="POST">
         <div class="form-group">
           <label for="First Name">First Name</label>
-          <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" value="<%=data[0].fname%>">
+          <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" value="<%=data.fname%>">
         </div>
         <div class="form-group">
                 <label for="Last Name">Last Name</label>
-                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" value="<%=data[0].lname%>">
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" value="<%=data.lname%>">
         </div>
         <div class="form-group">
                 <label for="Roll Number">Roll Number</label>
-                <input type="number" class="form-control" id="rollNumber" placeholder="Enter Roll Number" name="rollNumber" value="<%=data[0].rollNumber%>">
+                <input type="number" class="form-control" id="rollNumber" placeholder="Enter Roll Number" name="rollNumber" value="<%=data.rollNumber%>">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
