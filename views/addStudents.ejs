@@ -10,9 +10,11 @@
 </head>
 <body>
 
+<% if(typeof data =='undefined'){ %>
+
 <div class="container">
   <h2>Add Details</h2>
-  <form action="/students/add_students" method="POST" enctype="multipart/form-data">
+  <form action="/students/add_students" method="POST">
     <div class="form-group">
       <label for="First Name">First Name</label>
       <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
@@ -28,6 +30,25 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
-
+<% } else { %>
+  <div class="container">
+      <h2>Update Details</h2>
+      <form action="/students/update_students" method="POST">
+        <div class="form-group">
+          <label for="First Name">First Name</label>
+          <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" value="<%=data[0].fname%>">
+        </div>
+        <div class="form-group">
+                <label for="Last Name">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" value="<%=data[0].lname%>">
+        </div>
+        <div class="form-group">
+                <label for="Roll Number">Roll Number</label>
+                <input type="number" class="form-control" id="rollNumber" placeholder="Enter Roll Number" name="rollNumber" value="<%=data[0].rollNumber%>">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+ <%} %>
 </body>
 </html>

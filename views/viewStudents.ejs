@@ -6,6 +6,8 @@
 					<td> <%= data[i].fname %> </td>
 					<td> <%= data[i].lname %> </td>
                     <td> <%= data[i].rollNumber %> </td>
+					<td> <a href="/students/delete_students/<%= data[i]._id%>">Delete</a> </td>
+					<td> <a href="/students/update_students/<%= data[i]._id %>">Update</a> </td>
 				</tr>
 			<% } %>
 		</table>
